@@ -20,13 +20,20 @@
 
         if (count($errors) == 0) {
             $password = md5($password);
-            $query = "SELECT * FROM user WHERE username = '$username' AND password = '$password' ";
+            $query = "SELECT * FROM users WHERE username = '$username' AND password = '$password' ";
             $result = mysqli_query($conn, $query);
 
             if (mysqli_num_rows($result) == 1) {
+                $user = mysqli_fetch_assoc($result);
+
                 $_SESSION['username'] = $username;
-                $_SESSION['success'] = "Your are now logged in";
-                header("location: index.php");
+                $_SESSION['success'] = "You are now logged in";
+
+                if (str_ends_with($user['email'], '.admin') || str_ends_with($username, '.admin')) {
+                    header("location: admin_dashboard.php");
+                } else {
+                    header("location: index.php");
+                }
             } else {
                 array_push($errors, "Invalid username or password");
                 $_SESSION['error'] = "Invalid username or password!";

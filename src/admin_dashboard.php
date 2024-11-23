@@ -37,7 +37,7 @@ if (isset($_GET['logout'])) {
             <nav aria-label="Main Navigation" class="peer-checked:mt-8 peer-checked:max-h-56 flex max-h-0 w-full flex-col items-center justify-between overflow-hidden transition-all md:ml-24 md:max-h-full md:flex-row md:items-start">
                 <ul class="flex flex-col items-center space-y-2 md:ml-auto md:flex-row md:space-y-0">
                     <li class="font-semibold text-gray-600 md:mr-12 hover:text-rose-600"><a href="index.php">Home</a></li>
-                    <li class="font-semibold text-gray-600 md:mr-12 hover:text-rose-600"><a href="booking.php">Booking</a></li>
+                    <li class="font-semibold text-gray-600 md:mr-12 hover:text-rose-600"><a href="#">Booking</a></li>
                     <li class="font-semibold text-gray-600 md:mr-12 hover:text-rose-600"><a href="https://www.instagram.com/_lqtae.tt/">Contract us</a></li>
                     <li class="font-semibold text-gray-600 md:mr-12 hover:text-rose-600">
                         <?php if (isset($_SESSION['username'])): ?>

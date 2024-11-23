@@ -33,7 +33,7 @@
             exit();
         } 
 
-        $user_check_query = "SELECT * FROM user WHERE username = '$username' OR email = '$email' LIMIT 1";
+        $user_check_query = "SELECT * FROM users WHERE username = '$username' OR email = '$email' LIMIT 1";
         $query = mysqli_query($conn, $user_check_query);
         $result = mysqli_fetch_assoc($query);
 
@@ -51,7 +51,7 @@
         if (count($errors) == 0) {
             $password = md5($password_1);
 
-            $sql = "INSERT INTO user (username, email, password) VALUES ('$username', '$email', '$password')";
+            $sql = "INSERT INTO users (username, email, password) VALUES ('$username', '$email', '$password')";
             mysqli_query($conn, $sql);
 
             $_SESSION['username'] = $username;
