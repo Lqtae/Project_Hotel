@@ -23,7 +23,7 @@
           </svg>
         </div>
         <div class="px-10 pt-4 pb-8 bg-white rounded-tr-4xl border-none">
-        <h1 class="text-3xl block text-center font-semibold"><i class="fa-solid fa-user"></i> Login</h1>
+        <h1 class="text-3xl block text-center font-semibold uppercase"><i class="fa-solid fa-user"></i> Login</h1>
         <form action="login_db.php" method="post">
           <div class="relative mt-8">
                 <input id="username" name="username" type="text" class="peer h-10 w-full border-b-2 border-gray-300 text-gray-900 placeholder-transparent focus:outline-none focus:border-rose-600" placeholder="john@doe.com" />
@@ -43,7 +43,7 @@
                   </div>
                 <?php endif ?>
           <div class="mt-8">
-                <button type="submit" id="loginBtn" name="login_user" class="border-2 border-rose-600 bg-rose-600 text-white py-1 w-full rounded-md hover:bg-transparent hover:text-rose-600 font-semibold">Login</button>
+                <button type="submit" id="loginBtn" name="login_user" class="border-2 border-rose-600 bg-rose-600 text-white py-1 w-full rounded-md hover:bg-transparent hover:text-rose-600 font-semibold uppercase">Login</button>
           </div>
           <div class="mt-3">
                 <p class="text-center">Not yet a member? <a href="register.php" class=" text-rose-600 font-semibold">Sign Up</a></p>

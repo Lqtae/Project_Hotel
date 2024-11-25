@@ -27,9 +27,10 @@
                 $user = mysqli_fetch_assoc($result);
 
                 $_SESSION['username'] = $username;
+                $_SESSION['email'] = $user['email'];
                 $_SESSION['success'] = "You are now logged in";
 
-                if (str_ends_with($user['email'], '.admin') || str_ends_with($username, '.admin')) {
+                if (str_ends_with($user['email'], '.admin')) {
                     header("location: admin_dashboard.php");
                 } else {
                     header("location: index.php");
