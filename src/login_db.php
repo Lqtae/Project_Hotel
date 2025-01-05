@@ -31,7 +31,7 @@
                 $_SESSION['success'] = "You are now logged in";
 
                 if (str_ends_with($user['email'], '.admin')) {
-                    header("location: admin_dashboard.php");
+                    header("location: index.php");
                 } else {
                     header("location: index.php");
                 }
